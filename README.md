@@ -7,7 +7,7 @@
 #### Projekt <br>
 #### o1          Script för informationsinsamling (Recon) i Linux. <br>
 #### o2          MD5 Hash Checker och knäckning med Hashcat. <br>
-#### o3          Antivirus-test/Malware-test i Windows-miljö. <br>
+#### o3          Antivirus-test/Malware-test i Windows-miljö med hjälp av Eicar-sträng. <br>
 #### Eget projekt SecureCat lösenordsgenerator (finns i ett eget repository.) <br>
 
 ## Mål 
