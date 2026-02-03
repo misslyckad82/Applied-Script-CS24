@@ -1,72 +1,333 @@
-OBS! Filen är korrupt. Ny fil kommer inom kort.
+Välkommen till RECON script för att kontrollera en Linux-miljö
 
-[?2004h[?1049h[22;0;0t[1;42r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[40;34H(B[0;7m[ Läser... ](B[m[40;31H(B[0;7m[ Läste 76 rader ](B[m[H(B[0;7m  GNU nano 8.6                      script1.sh                                [1;77H(B[m
-[41d(B[0;7m^G(B[m Hjälp[16G(B[0;7m^O(B[m Skriv ut    (B[0;7m^F(B[m Var finns   (B[0;7m^K(B[m Klipp ut    (B[0;7m^T(B[m Kör
-[42d(B[0;7m^X(B[m Avsluta     (B[0;7m^R(B[m Läs fil     (B[0;7m^\(B[m Ersätt[46G(B[0;7m^U(B[m Klistra in  (B[0;7m^J(B[m Justera
-[2d[36m#!/bin/bash
-[3d#[4d# Detta script samlar in systeminformation - RECON
-[5d#[6d# Kan användas för följande attacker:
-[7d# [Skriv möjliga attacker]
-[8d#[9d# Author: Sanna Rytilahti
-[10d# Last Update: 2025-12-14
-[13d(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Välkommen till RECON script för att kontrollera en Linux-miljö"
-[15d[34mecho
-[16decho[39m(B[m (B[0;1m[33m"=== SYSTEMINFO ==="
-[17d[39m(B[muname(B[0;1m[35m -a
-[19d[34mecho
-[20decho[39m(B[m (B[0;1m[33m"=== AKTUELL ANVÄNDARE ==="
-[21d[34mecho[39m(B[m (B[0;1m[31m$USER
-[23d[34mecho
-[24decho[39m(B[m (B[0;1m[33m"=== INLOGGADE ANVÄNDARE ==="
-[25d[39m(B[mwho
-[27d(B[0;1m[34mecho
-[28decho[39m(B[m (B[0;1m[33m"=== ANVÄNDARE MED SHELL ==="
-[29d[34mgrep[39m(B[m (B[0;1m[33m"sh$"[39m(B[m /etc/passwd
-[31d(B[0;1m[34mecho
-[32decho[39m(B[m (B[0;1m[33m"=== NÄTVERK ==="
-[33d[39m(B[mip a [32m|[39m(B[m (B[0;1m[34mgrep[39m(B[m inet
-[35d(B[0;1m[34mecho
-[36decho[39m(B[m (B[0;1m[33m"=== OPERATIVSYSTEM ==="
-[37d[34mcat[39m(B[m /etc/os-release
-[39d(B[0;1m[34mecho
-[2d[39m(B[m[?12l[?25h[?25l[1;48H(B[0;7m*[77G(B[m[?12l[?25h
-[2dm#[32m![39m(B[m/bin/bash
-m[?25l[40;10H(B[0;7m[ rad  1/77 ( 1%), kol  2/13 ( 15%), teck.    1/1011 ( 0%) ](B[m[?12l[?25h
-[2dm[?25l[40;70H[?12l[?25h
-[2dm[?25l[?12l[?25hc#[32m![39m(B[m/bin/bash
-mc[42;1H[?1049l[23;0;0t
-[?1l>[?1049h[22;0;0t[1;44r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J[?2004h[?1h=[?1h=(B[0;7m  GNU nano 8.6                      script1.sh *                              [1;77H(B[m
-[2dmc#[32m![39m(B[m/bin/bash
-[3d[36m#[4d# Detta script samlar in systeminformation - RECON
-[5d#[6d# Kan användas för följande attacker:
-[7d# [Skriv möjliga attacker]
-[8d#[9d# Author: Sanna Rytilahti
-[10d# Last Update: 2025-12-14
-[13d(B[0;1m[34mecho[39m(B[m (B[0;1m[33m"Välkommen till RECON script för att kontrollera en Linux-miljö"
-[15d[34mecho
-[16decho[39m(B[m (B[0;1m[33m"=== SYSTEMINFO ==="
-[17d[39m(B[muname(B[0;1m[35m -a
-[19d[34mecho
-[20decho[39m(B[m (B[0;1m[33m"=== AKTUELL ANVÄNDARE ==="
-[21d[34mecho[39m(B[m (B[0;1m[31m$USER
-[23d[34mecho
-[24decho[39m(B[m (B[0;1m[33m"=== INLOGGADE ANVÄNDARE ==="
-[25d[39m(B[mwho
-[27d(B[0;1m[34mecho
-[28decho[39m(B[m (B[0;1m[33m"=== ANVÄNDARE MED SHELL ==="
-[29d[34mgrep[39m(B[m (B[0;1m[33m"sh$"[39m(B[m /etc/passwd
-[31d(B[0;1m[34mecho
-[32decho[39m(B[m (B[0;1m[33m"=== NÄTVERK ==="
-[33d[39m(B[mip a [32m|[39m(B[m (B[0;1m[34mgrep[39m(B[m inet
-[35d(B[0;1m[34mecho
-[36decho[39m(B[m (B[0;1m[33m"=== OPERATIVSYSTEM ==="
-[37d[34mcat[39m(B[m /etc/os-release
-[39d(B[0;1m[34mecho
-[40decho[39m(B[m (B[0;1m[33m"=== RAM-ANVÄNDNING ==="
-[41d[39m(B[mfree(B[0;1m[35m -h
-[43d[39m(B[0;7m^G(B[m Hjälp[16G(B[0;7m^O(B[m Skriv ut    (B[0;7m^F(B[m Var finns   (B[0;7m^K(B[m Klipp ut    (B[0;7m^T(B[m Kör
-[44d(B[0;7m^X(B[m Avsluta     (B[0;7m^R(B[m Läs fil     (B[0;7m^\(B[m Ersätt[46G(B[0;7m^U(B[m Klistra in  (B[0;7m^J(B[m Justera[?25l[?12l[?25h[2;3H[?25l[?12l[?25h[?25l
-[42d(B[0;7mSpara ändrad buffert?                                                         [43;1H J(B[m Ja[K
-[44d(B[0;7m N(B[m Nej          (B[0;7m^C(B[m Avbryt[K[42;23H[?12l[?25h[?25l[?12l[?25h[?25l
-[J[44d[?12l[?25h[44;1H[?1049l[23;0;0t
-[?1l>[?2004l
+=== SYSTEMINFO ===
+Linux kali 6.18.5+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 6.18.5-1kali1 (2026-01-19) x86_64 GNU/Linux
+
+=== AKTUELL ANVÄNDARE ===
+sanna82r
+
+=== INLOGGADE ANVÄNDARE ===
+sanna82r seat0        2026-02-03 14:33 (:0)
+
+=== ANVÄNDARE MED SHELL ===
+root:x:0:0:root:/root:/usr/bin/zsh
+postgres:x:114:118:PostgreSQL administrator:/var/lib/postgresql:/bin/bash
+sanna82r:x:1000:1000:sanna82r,,,:/home/sanna82r:/usr/bin/zsh
+
+=== NÄTVERK ===
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host noprefixroute 
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+    inet6 fd17:625c:f037:2:e1fd:b816:b70e:d6b3/64 scope global temporary dynamic 
+    inet6 fd17:625c:f037:2:a00:27ff:fe77:b509/64 scope global dynamic mngtmpaddr noprefixroute 
+    inet6 fe80::a00:27ff:fe77:b509/64 scope link noprefixroute 
+
+=== OPERATIVSYSTEM ===
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+VERSION_ID="2025.4"
+VERSION="2025.4"
+VERSION_CODENAME=kali-rolling
+ID=kali
+ID_LIKE=debian
+HOME_URL="https://www.kali.org/"
+SUPPORT_URL="https://forums.kali.org/"
+BUG_REPORT_URL="https://bugs.kali.org/"
+ANSI_COLOR="1;31"
+
+=== RAM-ANVÄNDNING ===
+              totalt      använt       fritt       delat  buff/cache  tillgängl.
+Minne:         3,8Gi       1,0Gi       1,8Gi        15Mi       1,2Gi       2,8Gi
+Växl.:         1,6Gi          0B       1,6Gi
+
+=== CPU-ARKITEKTUR ===
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) Ultra 7 155U
+CPU family:                              6
+Model:                                   170
+Thread(s) per core:                      1
+Core(s) per socket:                      2
+Socket(s):                               1
+Stepping:                                4
+BogoMIPS:                                5376,00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ibrs_enhanced fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt sha_ni arat md_clear flush_l1d arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               96 KiB (2 instances)
+L1i cache:                               128 KiB (2 instances)
+L2 cache:                                4 MiB (2 instances)
+L3 cache:                                24 MiB (2 instances)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+=== SHELL-KONTON ===
+root:x:0:0:root:/root:/usr/bin/zsh
+postgres:x:114:118:PostgreSQL administrator:/var/lib/postgresql:/bin/bash
+sanna82r:x:1000:1000:sanna82r,,,:/home/sanna82r:/usr/bin/zsh
+
+=== PRIVAT IP ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:77:b5:09 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 85201sec preferred_lft 85201sec
+    inet6 fd17:625c:f037:2:e1fd:b816:b70e:d6b3/64 scope global temporary dynamic 
+       valid_lft 86349sec preferred_lft 14349sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe77:b509/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86349sec preferred_lft 14349sec
+    inet6 fe80::a00:27ff:fe77:b509/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+=== PUBLIK IP- OCH PLATSINFO ===
+{
+    "ip": "217.21.233.214",
+    "network": "217.21.224.0/20",
+    "version": "IPv4",
+    "city": "Stockholm",
+    "region": "Stockholm County",
+    "region_code": "AB",
+    "country": "SE",
+    "country_name": "Sweden",
+    "country_code": "SE",
+    "country_code_iso3": "SWE",
+    "country_capital": "Stockholm",
+    "country_tld": ".se",
+    "continent_code": "EU",
+    "in_eu": true,
+    "postal": "195 87",
+    "latitude": 59.3326,
+    "longitude": 18.0651,
+    "timezone": "Europe/Stockholm",
+    "utc_offset": "+0100",
+    "country_calling_code": "+46",
+    "currency": "SEK",
+    "currency_name": "Krona",
+    "languages": "sv-SE,se,sma,fi-SE",
+    "country_area": 449964.0,
+    "country_population": 10183175,
+    "asn": "AS29672",
+    "org": "S:t Erik Kommunikation AB"
+}
+=== ÖPPNA PORTAR ===
+Netid State Recv-Q Send-Q Local Address:Port Peer Address:Port
+
+=== PROCESSER OCH RESURSANVÄNDNING ===
+top - 14:52:58 up 20 min,  1 user,  load average: 0,61, 0,25, 0,19
+Uppgifter: 180 totalt,   2 körande, 178 sovande,   0 stoppade,   0 zombie
+%Cpu/er:  0,0 an,  0,0 sy,  0,0 ni, 31,2 in, 43,8 vä,  0,0 ha, 25,0 ma,  0,0 st 
+MiB Minn:   3920,0 totalt,   1873,9 fritt,   1035,7 anv.,   1267,5 buff/cache   
+MiB Växl:   1620,0 totalt,   1620,0 fritt,      0,0 anv.,   2884,2 tillg Minn
+
+    PID ANVÄNDAR  PR  NI    VIRT    RES   DELT S  %CPU  %MIN      TID+ KOMMANDO
+   2317 root      39  19  170984 158424   4428 R  30,0   3,9   0:05.49 updated+
+   2337 sanna82r  20   0   10784   5600   3496 R  10,0   0,1   0:00.01 top
+      1 root      20   0   24868  15352  11384 S   0,0   0,4   0:01.32 systemd
+      2 root      20   0       0      0      0 S   0,0   0,0   0:00.03 kthreadd
+      3 root      20   0       0      0      0 S   0,0   0,0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     10 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     12 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     13 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     14 root      20   0       0      0      0 S   0,0   0,0   0:00.03 ksoftir+
+     15 root      20   0       0      0      0 I   0,0   0,0   0:00.65 rcu_pre+
+     16 root      20   0       0      0      0 S   0,0   0,0   0:00.00 rcu_exp+
+     17 root      20   0       0      0      0 S   0,0   0,0   0:00.02 rcu_exp+
+     18 root      rt   0       0      0      0 S   0,0   0,0   0:00.04 migrati+
+     19 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_in+
+     20 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/0
+     21 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/1
+     22 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_in+
+     23 root      rt   0       0      0      0 S   0,0   0,0   0:00.88 migrati+
+     24 root      20   0       0      0      0 S   0,0   0,0   0:00.03 ksoftir+
+     25 root      20   0       0      0      0 I   0,0   0,0   0:01.83 kworker+
+     26 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     31 root      20   0       0      0      0 S   0,0   0,0   0:00.02 kdevtmp+
+     32 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     33 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tas+
+     34 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tas+
+     35 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tas+
+     36 root      20   0       0      0      0 S   0,0   0,0   0:00.00 kauditd
+     37 root      20   0       0      0      0 S   0,0   0,0   0:00.00 khungta+
+     38 root      20   0       0      0      0 S   0,0   0,0   0:00.00 oom_rea+
+     39 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     40 root      20   0       0      0      0 I   0,0   0,0   0:00.13 kworker+
+     41 root      20   0       0      0      0 S   0,0   0,0   0:00.16 kcompac+
+     42 root      25   5       0      0      0 S   0,0   0,0   0:00.00 ksmd
+     43 root      39  19       0      0      0 S   0,0   0,0   0:00.71 khugepa+
+     44 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     45 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     46 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     47 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/9-a+
+     49 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     50 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     51 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     53 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     54 root       0 -20       0      0      0 I   0,0   0,0   0:00.44 kworker+
+     55 root      20   0       0      0      0 S   0,0   0,0   0:00.00 kswapd0
+     56 root      20   0       0      0      0 I   0,0   0,0   0:00.13 kdamond+
+     59 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     60 root      20   0       0      0      0 I   0,0   0,0   0:00.12 kworker+
+     61 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     62 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     64 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     65 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     66 root      20   0       0      0      0 I   0,0   0,0   0:00.01 kworker+
+     69 root      20   0       0      0      0 I   0,0   0,0   0:00.10 kworker+
+     74 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     75 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     76 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    164 root       0 -20       0      0      0 I   0,0   0,0   0:00.31 kworker+
+    207 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/18-+
+    208 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    209 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    210 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    211 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    212 root      20   0       0      0      0 S   0,0   0,0   0:00.03 scsi_eh+
+    213 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    214 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    215 root      20   0       0      0      0 I   0,0   0,0   0:00.08 kworker+
+    216 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    263 root      20   0       0      0      0 S   0,0   0,0   0:00.10 jbd2/sd+
+    264 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    326 root      20   0   50956  17524  16084 S   0,0   0,4   0:00.27 systemd+
+    360 root      20   0   38232  12228   8412 S   0,0   0,3   0:00.30 systemd+
+    367 root      20   0   16364   6620   5600 S   0,0   0,2   0:00.03 systemd+
+    371 root      -2   0       0      0      0 S   0,0   0,0   0:00.00 psimon
+    372 root      -2   0       0      0      0 S   0,0   0,0   0:00.00 psimon
+    422 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    481 root      20   0    8592   5016   1820 S   0,0   0,1   0:00.30 haveged
+    488 root      20   0  309612   7932   7136 S   0,0   0,2   0:00.09 account+
+    490 message+  20   0   10548   6904   4500 S   0,0   0,2   0:01.06 dbus-da+
+    496 polkitd   20   0  383100  10548   7956 S   0,0   0,3   0:00.27 polkitd
+    508 root      20   0   18440   9084   7692 S   0,0   0,2   0:00.31 systemd+
+    658 root      20   0  391600  12984  11012 S   0,0   0,3   0:00.14 ModemMa+
+    662 root      20   0  337528  20496  17504 S   0,0   0,5   0:00.21 Network+
+    711 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    712 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    718 root      20   0    7080   2988   2744 S   0,0   0,1   0:00.03 cron
+    763 root      20   0  353140   2960   2692 S   0,0   0,1   0:01.99 VBoxDRM+
+    772 root      20   0  292012   3532   3120 S   0,0   0,1   0:00.63 VBoxSer+
+    848 root      20   0  381348   7692   6828 S   0,0   0,2   0:00.04 lightdm
+    861 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    871 root      20   0    8420   2832   2632 S   0,0   0,1   0:00.02 agetty
+    872 root      20   0  419872 144096  77488 S   0,0   3,6   0:19.40 Xorg
+    894 root      -2   0       0      0      0 S   0,0   0,0   0:00.00 psimon
+    923 rtkit     21   1   21788   3328   3104 S   0,0   0,1   0:00.06 rtkit-d+
+   1006 root      20   0  171496   9240   8184 S   0,0   0,2   0:00.01 lightdm
+   1031 sanna82r  20   0   23272  13324  10696 S   0,0   0,3   0:00.12 systemd
+   1034 sanna82r  20   0   23464   4196   2304 S   0,0   0,1   0:00.00 (sd-pam)
+   1055 sanna82r  20   0    9492   6304   4560 S   0,0   0,2   0:00.18 dbus-da+
+   1056 sanna82r   9 -11  102248  12352   8452 S   0,0   0,3   0:00.02 pipewire
+   1058 sanna82r  20   0  183716  10884   9868 S   0,0   0,3   0:00.03 gnome-k+
+   1059 sanna82r  20   0    7508   3856   3608 S   0,0   0,1   0:00.01 mpris-p+
+   1060 sanna82r   9 -11  481256  19956  15028 S   0,0   0,5   0:00.08 wireplu+
+   1061 sanna82r  20   0   85004   5412   4828 S   0,0   0,1   0:00.00 pipewire
+   1062 sanna82r   9 -11   99712   9364   7872 S   0,0   0,2   0:00.02 pipewir+
+   1074 sanna82r  20   0  423188  38064  20612 S   0,0   0,9   0:00.51 xfce4-s+
+   1148 sanna82r  20   0   16908   1956   1608 S   0,0   0,0   0:00.00 VBoxCli+
+   1150 sanna82r  20   0  215732   4532   3888 S   0,0   0,1   0:00.00 VBoxCli+
+   1156 sanna82r  20   0   16908   1920   1576 S   0,0   0,0   0:00.00 VBoxCli+
+   1158 sanna82r  20   0  215064   3412   2944 S   0,0   0,1   0:01.35 VBoxCli+
+   1164 sanna82r  20   0   16908   1924   1576 S   0,0   0,0   0:00.00 VBoxCli+
+   1166 sanna82r  20   0  281116   3716   3116 S   0,0   0,1   0:07.90 VBoxCli+
+   1179 sanna82r  20   0   16908   1932   1580 S   0,0   0,0   0:00.00 VBoxCli+
+   1181 sanna82r  20   0  215252   3740   3244 S   0,0   0,1   0:00.65 VBoxCli+
+   1198 sanna82r  20   0  380352   7456   6760 S   0,0   0,2   0:00.01 at-spi-+
+   1204 sanna82r  20   0    9040   5316   4500 S   0,0   0,1   0:00.05 dbus-da+
+   1215 sanna82r  20   0  169092   7872   7136 S   0,0   0,2   0:00.31 at-spi2+
+   1222 sanna82r  20   0   10892   1904    812 S   0,0   0,0   0:00.00 ssh-age+
+   1231 sanna82r  20   0   90228   4036   3728 S   0,0   0,1   0:00.06 gpg-age+
+   1234 sanna82r  20   0  519408 118680  90860 S   0,0   3,0   0:05.86 xfwm4
+   1239 sanna82r  20   0  313476   8676   7784 S   0,0   0,2   0:00.02 gvfsd
+   1245 sanna82r  20   0  398956   7952   7144 S   0,0   0,2   0:00.00 gvfsd-f+
+   1253 sanna82r  20   0  349076  28532  20332 S   0,0   0,7   0:00.39 xfsetti+
+   1259 sanna82r  20   0  165576   6216   5712 S   0,0   0,2   0:00.00 dconf-s+
+   1263 sanna82r  20   0  519996  58332  34736 S   0,0   1,5   0:00.88 xfce4-p+
+   1269 sanna82r  20   0  487240  31012  22580 S   0,0   0,8   0:00.13 Thunar
+   1276 sanna82r  20   0  600064  86496  48904 S   0,0   2,2   0:02.74 xfdeskt+
+   1280 sanna82r  20   0  437764  45056  35092 S   0,0   1,1   0:00.36 wrapper+
+   1286 sanna82r  20   0  297800  53392  24920 S   0,0   1,3   0:03.89 wrapper+
+   1287 sanna82r  20   0  421220  28732  21420 S   0,0   0,7   0:00.11 wrapper+
+   1288 sanna82r  20   0  273440  30624  23372 S   0,0   0,8   0:00.22 wrapper+
+   1289 sanna82r  20   0  360764  41100  32812 S   0,0   1,0   0:00.13 wrapper+
+   1290 sanna82r  20   0  425856  39228  31252 S   0,0   1,0   0:00.14 wrapper+
+   1292 sanna82r  20   0  286740  39620  31600 S   0,0   1,0   0:00.49 wrapper+
+   1296 sanna82r  20   0  426120  39264  31256 S   0,0   1,0   0:00.12 wrapper+
+   1323 sanna82r  20   0  435344  40784  32436 S   0,0   1,0   0:00.37 xfce4-n+
+   1336 root      20   0  319316  11296   9332 S   0,0   0,3   0:00.62 upowerd
+   1343 sanna82r  20   0  606332  63672  36076 S   0,0   1,6   0:00.47 blueman+
+   1347 sanna82r  20   0  266112  19288  16856 S   0,0   0,5   0:00.05 polkit-+
+   1357 sanna82r  20   0   66724  42156  23208 S   0,0   1,1   0:00.27 applet.+
+   1366 sanna82r  20   0  587684  44908  36040 S   0,0   1,1   0:00.14 nm-appl+
+   1367 sanna82r  20   0  317244   7216   6628 S   0,0   0,2   0:00.00 agent
+   1377 sanna82r  20   0    6264   3440   3220 S   0,0   0,1   0:00.01 xautore+
+   1388 sanna82r  20   0  398628   9220   7852 S   0,0   0,2   0:00.07 xiccd
+   1398 sanna82r  20   0  282384  36652  20148 S   0,0   0,9   0:00.31 xfce4-s+
+   1400 sanna82r  20   0   12772   2164   1836 S   0,0   0,1   0:00.19 xcape
+   1406 sanna82r  20   0  411692  26832  19452 S   0,0   0,7   0:00.23 xfce4-p+
+   1421 colord    20   0  316824  15256  10160 S   0,0   0,4   0:00.10 colord
+   1534 sanna82r  20   0  378736  19532  17496 S   0,0   0,5   0:00.06 obexd
+   1541 sanna82r  20   0  391252  11824  10348 S   0,0   0,3   0:00.02 gvfs-ud+
+   1545 root      20   0  478588  14260  11884 S   0,0   0,4   0:00.08 udisksd
+   1555 sanna82r  20   0  390432   9312   8088 S   0,0   0,2   0:00.20 gvfs-af+
+   1561 sanna82r  20   0  308340   7056   6476 S   0,0   0,2   0:00.01 gvfs-go+
+   1566 sanna82r  20   0  309332   7648   6904 S   0,0   0,2   0:00.00 gvfs-gp+
+   1571 sanna82r  20   0  308364   7200   6576 S   0,0   0,2   0:00.01 gvfs-mt+
+   1580 sanna82r  20   0  169384   7256   6684 S   0,0   0,2   0:00.00 gvfsd-m+
+   1584 sanna82r  20   0  534916   9912   8792 S   0,0   0,2   0:00.03 gvfsd-t+
+   1606 sanna82r  20   0  655552  67296  50364 S   0,0   1,7   0:07.55 qtermin+
+   1608 sanna82r  20   0  631336  20744  17152 S   0,0   0,5   0:00.04 xdg-des+
+   1615 sanna82r  20   0  309220   7104   6540 S   0,0   0,2   0:00.00 xdg-per+
+   1623 sanna82r  20   0  540400   7776   7092 S   0,0   0,2   0:00.01 xdg-doc+
+   1629 root      20   0    2796   1976   1860 S   0,0   0,0   0:00.00 fusermo+
+   1640 sanna82r  20   0  480504  20848  17932 S   0,0   0,5   0:00.06 xdg-des+
+   1662 sanna82r  20   0   10924   7016   4788 S   0,0   0,2   0:03.73 zsh
+   1742 root      20   0       0      0      0 I   0,0   0,0   0:01.08 kworker+
+   2032 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+   2170 root      20   0       0      0      0 I   0,0   0,0   0:00.02 kworker+
+   2179 root      20   0       0      0      0 I   0,0   0,0   0:00.52 kworker+
+   2180 root      20   0       0      0      0 I   0,0   0,0   0:00.02 kworker+
+   2211 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+   2212 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+   2233 root      20   0   16808   6756   5708 S   0,0   0,2   0:00.00 systemd+
+   2234 root      20   0   16808   6744   5692 S   0,0   0,2   0:00.00 systemd+
+   2235 root      20   0   16808   6752   5708 S   0,0   0,2   0:00.00 systemd+
+   2265 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+   2288 root      20   0       0      0      0 I   0,0   0,0   0:00.06 kworker+
+   2322 sanna82r  20   0    7564   3720   3424 S   0,0   0,1   0:00.00 script1+
+
+=== SLUT PÅ KONTROLL ===
