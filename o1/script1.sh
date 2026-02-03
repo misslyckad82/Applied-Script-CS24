@@ -9,7 +9,7 @@
 # Som etisk hackare kan scriptet däremot användas som ett hjälpmedel vid penetrationstestning.
 #
 # Author: Sanna Rytilahti
-# Last Update: 2026-01-09
+# Last Update: 2026-02-03
 
 
 echo "Välkommen till RECON script för att kontrollera en Linux-miljö"
@@ -48,7 +48,7 @@ lscpu
 
 echo
 echo "=== SHELL-KONTON ==="
-cat /etc/passwd grep "sh$"
+cat /etc/passwd | grep "sh$"
 
 echo
 echo "=== PRIVAT IP ==="
@@ -64,7 +64,7 @@ ss -tuln
 
 echo
 echo "=== PROCESSER OCH RESURSANVÄNDNING ==="
-top
+top -b -n 1
 
 echo
 echo "=== SLUT PÅ KONTROLL ==="
